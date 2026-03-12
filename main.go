@@ -45,12 +45,17 @@ func serveMarkdown(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if !strings.HasSuffix(path, ".md") {
+	info, err := os.Stat(absPath)
+	if err == nil && info.IsDir() {
+		absPath = filepath.Join(absPath, "README.md")
+	}
+
+	if !strings.HasSuffix(absPath, ".md") {
 		http.Error(w, "Only .md files allowed", http.StatusBadRequest)
 		return
 	}
 
-	info, err := os.Stat(absPath)
+	info, err = os.Stat(absPath)
 	if err != nil || info.IsDir() {
 		http.Error(w, "404 Not Found", http.StatusNotFound)
 		return
@@ -88,7 +93,7 @@ pre code { background: none; padding: 0; }
 <body>
 %s
 </body>
-</html>`, path, htmlContent)
+</html>`, absPath, htmlContent)
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	w.Write([]byte(html))
