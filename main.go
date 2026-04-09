@@ -1,3 +1,6 @@
+// Copyright (c) Jeremías Casteglione <jeremias.rootstrap@gmail.com>
+// See LICENSE file.
+
 package main
 
 import (

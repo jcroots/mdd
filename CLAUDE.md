@@ -15,7 +15,13 @@ make install    # runs go get && go install
 go run main.go  # run without installing
 ```
 
-There are no tests or linting configured.
+```bash
+go test ./...     # run all tests
+go test -v ./...  # verbose
+go test -run TestRootServesREADME ./...  # run a single test
+```
+
+No linting is configured.
 
 ## Architecture
 
