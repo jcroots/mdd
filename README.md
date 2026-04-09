@@ -18,5 +18,5 @@ Run `mdd` from any directory containing `.md` files. It serves them as rendered 
 ## Testing
 
 ```bash
-go test ./...
+make test
 ```

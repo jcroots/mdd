@@ -16,8 +16,8 @@ go run main.go  # run without installing
 ```
 
 ```bash
-go test ./...     # run all tests
-go test -v ./...  # verbose
+make test          # run all tests
+go test -v ./...   # verbose
 go test -run TestRootServesREADME ./...  # run a single test
 ```
 
