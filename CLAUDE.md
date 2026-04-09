@@ -29,7 +29,7 @@ Single-file Go application (`main.go`) with one HTTP handler (`serveMarkdown`). 
 
 ## Maintenance
 
-Keep CLAUDE.md up to date when making changes that affect build commands, test commands, project structure, or architecture.
+Keep CLAUDE.md and README.md up to date when making changes that affect build commands, test commands, usage, project structure, or architecture.
 
 All Go source files must include the copyright header at the top:
 
