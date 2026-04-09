@@ -26,3 +26,14 @@ No linting is configured.
 ## Architecture
 
 Single-file Go application (`main.go`) with one HTTP handler (`serveMarkdown`). Uses `github.com/gomarkdown/markdown` for markdown-to-HTML conversion with common extensions and `HrefTargetBlank` enabled. The rendered HTML is wrapped in a minimal inline-styled page template.
+
+## Maintenance
+
+Keep CLAUDE.md up to date when making changes that affect build commands, test commands, project structure, or architecture.
+
+All Go source files must include the copyright header at the top:
+
+```go
+// Copyright (c) Jeremías Casteglione <jeremias.rootstrap@gmail.com>
+// See LICENSE file.
+```
